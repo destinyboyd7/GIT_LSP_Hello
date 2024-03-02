@@ -3,8 +3,16 @@ package org.howard.edu.lsp.assignment4;
 import java.util.ArrayList;
 //import java.util.List;
 
+/**
+ * Driver method
+ */
 public class Driver {
-    public static void main(String[] args) {
+	/**
+	 * main methos runs implementation of my methods in IntegerSet.java
+	 * @param args command line arguments
+	 * @throws IntegerSetException The exception will be thrown if the set is empty
+	 */
+    public static void main(String[] args) throws IntegerSetException {
         // Create sets
         IntegerSet setA = new IntegerSet();
 
@@ -50,6 +58,7 @@ public class Driver {
         
         
         IntegerSet setC;
+        
         // Testing union
         System.out.println("\nUnion of SetA and SetB"); //prompt for union of setA and setB
         System.out.println("Value of SetA is: " + setA.toString()); // setA before Union 
