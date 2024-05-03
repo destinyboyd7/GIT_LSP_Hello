@@ -22,15 +22,6 @@ public class Rectangle implements Shape {
  }
 }
 
-//Client.java
-public class Client {
- public static void main(String[] args) {
-    Circle c = new Circle();
-	    c.draw();
-	    Rectangle r = new Rectangle();
-	    r.draw();
- }
-}
 
 public class ShapeFactory {
 	public Shape createShape(String type) {
@@ -38,14 +29,27 @@ public class ShapeFactory {
 			return new Circle();
 		}
 		else if (type.equalsIsIgnoreCase("rectangle")) {
-			return
+			return new Rectangle()
 		}
+		return null;
 	}
 }
-//Main.java
-public class Main {
-	public static void main(String[] args ){
-		Shape c = Client.main("circle");
-				}
+
+public class Client {
+    public static void main(String[] args) {
+        ShapeFactory shapeFactory = new ShapeFactory();
+
+        // Create a circle
+        Shape circle = shapeFactory.createShape("circle");
+        if (circle != null) {
+            circle.draw();
+        }
+
+        // Create a rectangle
+        Shape rectangle = shapeFactory.createShape("rectangle");
+        if (rectangle != null) {
+            rectangle.draw();
+        }
+    }
 }
 */
